@@ -261,7 +261,9 @@ div#kc-header{
     font-weight: bold;
     top: 50px;
 }
-
+.login-pf-page{
+    text-shadow: none;
+}
 #kc-form-login:after{
     /* #hide */
     content: '@2024-206 UniCloud. All right reserved';
@@ -273,7 +275,7 @@ div#kc-header{
     color: #64748b;
     font-size: 12px;
     text-shadow: none;
-    margin-top: 30px
+    margin-top: 24px
 }
 .login-pf body{
     background: url('../img/bg.png');
@@ -577,13 +579,110 @@ line-height: 16px;
     min-height: 100vh;
     padding-top: 0px;
     position: relative;
-    background: url('../img/bg-right.jpg');
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: right;
 }
 .login-pf-page::after{
     display: block !important;
     content: '';
-    width: 50%;
+    position: fixed;
+    height: 100vh;
+    width: 50vw;
+    top: 0px;
+    right: 0;
+    background: url('../img/bg-right.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.alert-error,
+.login-pf-page .alert-warning{
+        font-size: 11px;
+    text-shadow: none;
+    padding: 10px;
+}
+.login-pf-page #saveTOTPBtn{
+    height: 48px;
+    border: none;
+    box-shadow: none;
+    margin-top: 0;
+    color: #fff;
+    position: relative;
+    background: rgb(4, 92, 199);
+    z-index: 999;
+    font-size: 16px;
+    border-radius: 6px;
+        line-height: 1;
+}
+
+.login-pf-page #saveTOTPBtn:after{
+    content: 'Đăng nhập';
+    color: black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#kc-totp-settings{
+    border: 1px solid #045cc7;
+    border-radius: 4px;
+    background: rgb(4 92 199 / 10%);
+    padding: 12px;
+    margin-top: 10px;
+}
+#kc-totp-settings #kc-totp-supported-apps{
+        line-height: 1.4;
+}
+#kc-totp-settings p{
+    color: #000;
+    margin-bottom: 0;
+}
+#kc-totp-settings li{
+        color: #72767b;
+        list-style: none;
+}
+#kc-totp-settings>li{
+    border-bottom: 1px solid #82a7d326;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#kc-totp-settings>li:last-child{
+    padding-bottom: 0;
+    border-bottom: none;
+}
+#kc-totp-settings li img{
+        max-width: 100px;
+}
+#kc-totp-settings-form .form-group .control-label,
+#kc-totp-settings{
+    text-shadow: none;
+    color: #212633;
+}
+#kc-totp-settings-form #kc-form-options .checkbox{
+    margin-right: 0px;
+}
+#kc-totp-settings-form #kc-form-options .checkbox input{
+    height: auto;
+    position: static;
+        margin-left: 0;
+}
+#kc-totp-settings-form #kc-form-options .checkbox label{
+    color: #212633;
+    text-shadow: none;
+    font-size: 14px;
+    text-align: left;
+    padding-left: 0px;
+    display: flex;
+    white-space: nowrap;
+    gap: 10px;
+    align-items: center;
+}
+#kc-form-login{
+    margin-bottom: 10px;
+}
+#kc-content-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#mode-manual{
+    color: #045cc7;
 }
