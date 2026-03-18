@@ -8,14 +8,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 
-    color: #fff;
+    color: #212633;
     font-family: sans-serif;
-    text-shadow: 0px 0px 10px #000;
     margin: 0px;
-}
-
-a {
-    color: #fff;
 }
 
 /* Change content to change the title of the page*/
@@ -352,6 +347,9 @@ span.pf-m-error{
 .form-group .pf-c-input-group .pf-m-control::after{
     display: none;
 }
+.form-group .pf-c-input-group .pf-m-control[aria-controls="password"]{
+    z-index: 999;
+}
 .form-group .pf-c-input-group{
     position: relative;
 }
@@ -682,7 +680,25 @@ line-height: 16px;
     display: flex;
     flex-direction: column-reverse;
 }
-
+a,
 #mode-manual{
     color: #045cc7;
+}
+
+#kc-content-wrapper:has(#kc-otp-login-form) #kc-form-buttons:after{
+    width: calc(100% - 40px);
+    left: 20px;
+}
+
+#kc-content-wrapper:has(#kc-otp-login-form) #kc-form-buttons input{
+    text-indent: 0;
+}
+#kc-attempted-username{
+    color: #045cc7;
+        font-size: 22px;
+}
+#kc-content-wrapper:has(#kc-otp-login-form) .pf-c-form__label{
+    color: #525B73 !important;
+    font-size: 14px;
+    font-weight: bold;
 }
